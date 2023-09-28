@@ -48,7 +48,9 @@ In this command:
 - Make sure you've placed the test images (and their masks, if available, for calculating mIoU) in a new folder, and provide the path to this folder using the `--test_data_dir` argument.
 
 ## Testing on Colab Notebook
-You can test the trained text embeddings in this [Colab notebook](https://colab.research.google.com/drive/1fpKx6b2hQGEx1GK269vOw_sKeV9Rpnuj?usp=sharing). After cloning the code, please follow the steps mentioned above and execute the provided command.
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1fpKx6b2hQGEx1GK269vOw_sKeV9Rpnuj?usp=sharing)
+
+You can test the trained text embeddings in the Colab notebook. After cloning the code, please follow the steps mentioned above and execute the provided command.
 
 ## Patchifying the Image
 To configure the patching of images for validation and testing, you can specify different values for the `--patch_size` and `--num_patches_per_side` parameters. These settings will be used to divide the image into a grid of patches, calculate individual final attention maps (referred to as **WAS-attention** maps), aggregate them, and generate the segmentation mask prediction.
