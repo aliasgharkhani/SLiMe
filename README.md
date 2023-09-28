@@ -11,7 +11,7 @@ PyTorch implementation of SLiMe: Segment Like Me, a 1-shot image segmentation me
 
 # Setup
 To begin using SLiMe, you first need to create a virtual environment and install the dependencies using the following commands:
-```
+```python
 python -m venv slime_venv
 source slime_venv/bin/activate
 pip install -r requirements.txt
@@ -25,7 +25,7 @@ First, create a new folder (e.g., `slime/data/train`) and place the training ima
 Next, place the test images in a separate folder (e.g., `slime/data/test`) and specify the path to this folder using `--test_data_dir`. Additionally, you should define a name for the segmented parts within the training images to be used with the `--parts_to_return` argument, including the background. For instance, if you have segmented the body and head of a dog, you should set `--parts_to_return` to `"background body head"`.
 
 Finally, execute the following command within the slime folder (the main folder obtained after cloning):
-```
+```python
 python -m src.main --dataset sample \
                    --part_names {PARTNAMES} \
                    --train_data_dir {TRAIN_DATA_DIR} \
@@ -37,7 +37,7 @@ If you have supplied test images along with their corresponding masks, running t
 
 # Testing with the trained text embeddings
 To use the trained text embeddings for testing, run this command:
-```
+```python
 python -m src.main --dataset sample \
                    --checkpoint_dir {CHECKPOINT_DIR} \
                    --test_data_dir {TEST_DATA_DIR} \
@@ -55,7 +55,7 @@ You can test the trained text embeddings in the Colab notebook. After cloning th
 To configure the patching of images for validation and testing, you can specify different values for the `--patch_size` and `--num_patches_per_side` parameters. These settings will be used to divide the image into a grid of patches, calculate individual final attention maps (referred to as **WAS-attention** maps), aggregate them, and generate the segmentation mask prediction.
 
 Here's an example of how to include these parameters in your command:
-```
+```python
 python -m src.main --dataset sample \
                    --checkpoint_dir {CHECKPOINT_DIR} \
                    --test_data_dir {TEST_DATA_DIR} \
@@ -74,7 +74,7 @@ To train and test with the 1-sample setting of SLiMe on the car class of PASCAL-
 2. Navigate to the `slime` folder.
 3. Run the following command, replacing `{path_to_data_folder}` with the path to the folder where you extracted the data (without a backslash at the end):
 
-```
+```python
 DATADIR={path_to_data_folder}
 python3 -m src.main --dataset_name pascal \
                     --part_names background body light plate wheel window \
@@ -88,7 +88,7 @@ python3 -m src.main --dataset_name pascal \
 ```
 
 For the 10-sample setting, you can modify the command as follows:
-```
+```python
 DATADIR={path_to_data_folder}
 python3 -m src.main --dataset_name pascal \
                     --part_names background body light plate wheel window \
@@ -111,7 +111,7 @@ To train and test with the 1-sample setting of SLiMe on the horse class of PASCA
 2. Navigate to the `slime` folder.
 3. Run the following command, replacing `{path_to_data_folder}` with the path to the folder where you extracted the data (without a backslash at the end):
 
-```
+```python
 DATADIR={path_to_data_folder}
 python3 -m src.main --dataset_name pascal \
                     --part_names background head neck+torso leg tail \
@@ -126,7 +126,7 @@ python3 -m src.main --dataset_name pascal \
 
 For the 10-sample setting, you can modify the command as follows:
 
-```
+```python
 DATADIR={path_to_data_folder}
 python3 -m src.main --dataset_name pascal \
                     --part_names background head neck+torso leg tail \
@@ -148,7 +148,7 @@ To train and test with the 1-sample setting of SLiMe on CelebAMask-HQ, you can f
 2. Navigate to the `slime` folder.
 3. Run the following command, replacing `{path_to_data_folder}` with the path to the folder where you extracted the data (without a backslash at the end):
 
-```
+```python
 DATADIR={path_to_data_folder}
 python3 -m src.main --dataset_name celeba \
                     --part_names background skin eye mouth nose brow ear neck cloth hair \
@@ -161,7 +161,7 @@ python3 -m src.main --dataset_name celeba \
 
 For the 10-sample setting, you can modify the command as follows:
 
-```
+```python
 DATADIR={path_to_data_folder}
 python3 -m src.main --dataset_name celeba \
                     --part_names background skin eye mouth nose brow ear neck cloth hair \
