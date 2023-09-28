@@ -1,0 +1,6 @@
+*.pth
+*.ipynb
+*.xml
+*.iml
+*.bin
+*.pyc
