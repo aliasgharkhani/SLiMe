@@ -47,6 +47,9 @@ In this command:
 - Replace `{CHECKPOINT_DIR}` with the path to the folder where the trained text embeddings are stored. Ensure that only the relevant text embeddings are present in this directory because the code will load all text embeddings from the specified folder.
 - Make sure you've placed the test images (and their masks, if available, for calculating mIoU) in a new folder, and provide the path to this folder using the `--test_data_dir` argument.
 
+## Testing on Colab Notebook
+You can test the trained text embeddings in this [Colab notebook](https://colab.research.google.com/drive/1fpKx6b2hQGEx1GK269vOw_sKeV9Rpnuj?usp=sharing). After cloning the code, please follow the steps mentioned above and execute the provided command.
+
 ## Patchifying the Image
 To configure the patching of images for validation and testing, you can specify different values for the `--patch_size` and `--num_patches_per_side` parameters. These settings will be used to divide the image into a grid of patches, calculate individual final attention maps (referred to as **WAS-attention** maps), aggregate them, and generate the segmentation mask prediction.
 
@@ -172,6 +175,7 @@ In this case, you should specify `celeba/train_10` for `--train_data_dir` and `c
 
 # Trained text embeddings
 At this [link](https://drive.google.com/drive/folders/1sA8od8iFbyD2T47A8JsevRf-ExkLV0lT?usp=sharing), we are uploading the text embeddings that we have trained, including the text embeddings we trained for the paper. You can download these text embeddings and use them for testing on your data using the command in [Testing with the trained text embeddings](https://github.com/aliasgharkhani/SLiMe/edit/main/README.md#testing-with-the-trained-text-embeddings) section.
+
 
 # Issues and problems
 If you have any questions or problems, please create an issue [here](https://github.com/aliasgharkhani/SLiMe/issues).
