@@ -174,7 +174,7 @@ python3 -m src.main --dataset_name celeba \
 In this case, you should specify `celeba/train_10` for `--train_data_dir` and `celeba/val` for `--val_data_dir`.
 
 # Trained text embeddings
-At this [link](https://drive.google.com/drive/folders/1sA8od8iFbyD2T47A8JsevRf-ExkLV0lT?usp=sharing), we are uploading the text embeddings that we have trained, including the text embeddings we trained for the paper. You can download these text embeddings and use them for testing on your data using the command in [Testing with the trained text embeddings](https://github.com/aliasgharkhani/SLiMe/edit/main/README.md#testing-with-the-trained-text-embeddings) section.
+At this [link](https://drive.google.com/drive/folders/1sA8od8iFbyD2T47A8JsevRf-ExkLV0lT?usp=sharing), we are uploading the text embeddings that we have trained, including the text embeddings we trained for the paper. You can download these text embeddings and use them for testing on your data using the command in [Testing with the trained text embeddings](https://github.com/aliasgharkhani/SLiMe/tree/main#testing-with-the-trained-text-embeddings) section.
 
 
 # Issues and problems
