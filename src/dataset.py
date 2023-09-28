@@ -55,13 +55,13 @@ class Dataset(TorchDataset):
         self.test_transform = A.Compose([A.Resize(512, 512), ToTensorV2()])
 
     def __getitem__(self, idx):
-        image = Image.open(self.image_paths[idx])
+        image = cv2.imread(self.image_paths[idx])
         if len(image.shape) > 2 and image.shape[2] == 4:
             # convert the image from RGBA2RGB
             image = cv2.cvtColor(image, cv2.COLOR_BGRA2BGR)
         if self.train:
             mask = np.load(self.mask_paths[idx])
-            result = self.train_transform_1(image=np.array(image), mask=mask)
+            result = self.train_transform_1(image=image, mask=mask)
             image = result["image"]
             mask = result["mask"]
             original_mask_size = np.where(mask == self.current_part_idx, 1, 0).sum()
@@ -92,7 +92,7 @@ class Dataset(TorchDataset):
         else:
             if len(self.mask_paths) > 0:
                 mask = np.load(self.mask_paths[idx])
-                result = self.test_transform(image=np.array(image), mask=mask)
+                result = self.test_transform(image=image, mask=mask)
                 mask = result["mask"]
                 mask = torch.nn.functional.interpolate(
                     mask[None, None, ...].type(torch.float),
