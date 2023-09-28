@@ -1,5 +1,5 @@
 # SLiMe: Segment Like Me
-**[Paper](https://arxiv.org/abs/2309.03179)**
+**[Paper](https://arxiv.org/abs/2309.03179)** | **[Colab Notebook](https://colab.research.google.com/drive/1fpKx6b2hQGEx1GK269vOw_sKeV9Rpnuj?usp=sharing)**
 
 ![SLiMe Method](https://github.com/aliasgharkhani/SLiMe/blob/main/media/slime_teaser.gif)
 
