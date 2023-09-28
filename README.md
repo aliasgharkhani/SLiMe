@@ -5,7 +5,7 @@
 
 
 PyTorch implementation of SLiMe: Segment Like Me, a 1-shot image segmentation method based on Stable Diffusion. <br><br>
-[Aliasghar Khani<sup>1, 2</sup>](https://aliasgharkhani.github.io/), [Saeid Asgari Taghanaki<sup>2</sup>](https://asgsaeid.github.io/), [Aditya Sanghi<sup>2</sup>](https://www.research.autodesk.com/people/aditya-sanghi/), [Ali Mahdavi Amiri<sup>1</sup>](https://www.sfu.ca/~amahdavi/), [Ghassan Hamarneh<sup>1</sup>](https://www.medicalimageanalysis.com/)
+[Aliasghar Khani<sup>1, 2</sup>](https://aliasgharkhani.github.io/), [Saeid Asgari Taghanaki<sup>1, 2</sup>](https://asgsaeid.github.io/), [Aditya Sanghi<sup>2</sup>](https://www.research.autodesk.com/people/aditya-sanghi/), [Ali Mahdavi Amiri<sup>1</sup>](https://www.sfu.ca/~amahdavi/), [Ghassan Hamarneh<sup>1</sup>](https://www.medicalimageanalysis.com/)
 
 <sup><sup>1</sup> Simon Fraser University  <sup>2</sup> Autodesk Research</sup>
 
@@ -46,6 +46,8 @@ In this command:
 
 - Replace `{CHECKPOINT_DIR}` with the path to the folder where the trained text embeddings are stored. Ensure that only the relevant text embeddings are present in this directory because the code will load all text embeddings from the specified folder.
 - Make sure you've placed the test images (and their masks, if available, for calculating mIoU) in a new folder, and provide the path to this folder using the `--test_data_dir` argument.
+
+![Camouflage Result](https://github.com/aliasgharkhani/SLiMe/blob/main/media/comp_comouflage_seg.png)
 
 ## Testing on Colab Notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1fpKx6b2hQGEx1GK269vOw_sKeV9Rpnuj?usp=sharing)
 
