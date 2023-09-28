@@ -17,7 +17,7 @@ import gc
 from PIL import Image
 
 
-class CoSegmenterTrainer(pl.LightningModule):
+class Slime(pl.LightningModule):
     def __init__(self, config, learning_rate=0.001):
         super().__init__()
         self.counter = 0

@@ -1,7 +1,7 @@
 import pytorch_lightning as pl
 
-from src.co_part_segmentation_trainer import (
-    CoSegmenterTrainer,
+from src.slime import (
+    Slime,
 )
 from src.dataset import DataModule
 from src.arguments import init_args
@@ -24,7 +24,7 @@ def main():
         min_crop_ratio=config.min_crop_ratio,
         dataset_name=config.dataset_name,
     )
-    model = CoSegmenterTrainer(config=config)
+    model = Slime(config=config)
     if isinstance(config.gpu_id, int):
         gpu_id = [config.gpu_id]
     else:
