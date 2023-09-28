@@ -56,6 +56,9 @@ class Dataset(TorchDataset):
 
     def __getitem__(self, idx):
         image = Image.open(self.image_paths[idx])
+        if len(image.shape) > 2 and image.shape[2] == 4:
+            # convert the image from RGBA2RGB
+            image = cv2.cvtColor(image, cv2.COLOR_BGRA2BGR)
         if self.train:
             mask = np.load(self.mask_paths[idx])
             result = self.train_transform_1(image=np.array(image), mask=mask)
