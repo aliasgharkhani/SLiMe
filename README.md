@@ -47,8 +47,7 @@ In this command:
 - Replace `{CHECKPOINT_DIR}` with the path to the folder where the trained text embeddings are stored. Ensure that only the relevant text embeddings are present in this directory because the code will load all text embeddings from the specified folder.
 - Make sure you've placed the test images (and their masks, if available, for calculating mIoU) in a new folder, and provide the path to this folder using the `--test_data_dir` argument.
 
-## Testing on Colab Notebook
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1fpKx6b2hQGEx1GK269vOw_sKeV9Rpnuj?usp=sharing)
+## Testing on Colab Notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1fpKx6b2hQGEx1GK269vOw_sKeV9Rpnuj?usp=sharing)
 
 You can test the trained text embeddings in the Colab notebook. After cloning the code, please follow the steps mentioned above and execute the provided command.
 
