@@ -91,7 +91,7 @@ class Slime(pl.LightningModule):
         values, counts = torch.unique(mask, return_counts=True)
         num_pixels[values.type(torch.int64)] = counts.type(torch.int64)
         num_pixels[0] = 0
-        pixel_weights = torch.where(num_pixels > 0, num_pixels.sum() / num_pixels, 0)
+        pixel_weights = torch.where(num_pixels > 0, num_pixels.sum() / (num_pixels + 1e-6), 0)
         pixel_weights[0] = 1
         mask = mask[0]
         text_embedding = torch.cat(
